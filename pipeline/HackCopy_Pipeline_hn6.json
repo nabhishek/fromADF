@@ -1,0 +1,53 @@
+{
+	"name": "HackCopy_Pipeline_hn6",
+	"properties": {
+		"description": "perf-eastus/tb/sub0/ (perf_AmazonS3) → source/ (AzureStorage1)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_hn6",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "perf-eastus/tb/sub0/"
+					},
+					{
+						"name": "Destination",
+						"value": "source/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "FileSystemSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 16
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_AmazonS3Object_hn6",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_AzureBlob_hn6",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

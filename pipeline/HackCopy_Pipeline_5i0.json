@@ -1,0 +1,53 @@
+{
+	"name": "HackCopy_Pipeline_5i0",
+	"properties": {
+		"description": "/Product.csv (FileServer1) → dump/ (localfilesystem)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_5i0",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "/Product.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "dump/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "FileSystemSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "FileSystemSink"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_FileShare_5i0",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_FileShare_5i0",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

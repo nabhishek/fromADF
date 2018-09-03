@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_AzureSqlDWTable_j4k",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"typeProperties": {
+			"tableName": "[dbo].[OrderLine]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

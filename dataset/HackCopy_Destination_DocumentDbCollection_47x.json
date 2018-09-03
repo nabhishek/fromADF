@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_DocumentDbCollection_47x",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CosmosDb_DBTODOLIST",
+			"type": "LinkedServiceReference"
+		},
+		"type": "DocumentDbCollection",
+		"typeProperties": {
+			"collectionName": "Product"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "HackCopy_Source_AmazonS3Object_nhg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "perf_AmazonS3",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AmazonS3Object",
+		"typeProperties": {
+			"key": "",
+			"prefix": "tb/sub0/",
+			"bucketName": "perf-eastus"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

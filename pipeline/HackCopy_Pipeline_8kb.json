@@ -1,0 +1,52 @@
+{
+	"name": "HackCopy_Pipeline_8kb",
+	"properties": {
+		"description": "[dbo].[Product] (onpremSqlServer) → dump/ (localfilesystem)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_8kb",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[Product]"
+					},
+					{
+						"name": "Destination",
+						"value": "dump/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "FileSystemSink"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_SqlServerTable_8kb",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_FileShare_8kb",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

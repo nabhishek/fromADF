@@ -1,0 +1,480 @@
+{
+	"name": "CopyPipeline_6lp",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach_6lp",
+				"type": "ForEach",
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.cw_items",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy_6lp",
+							"type": "Copy",
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false
+							},
+							"userProperties": [
+								{
+									"name": "Source",
+									"value": "@{item().source.tableName}"
+								},
+								{
+									"name": "Destination",
+									"value": "@{item().destination.tableName}"
+								}
+							],
+							"typeProperties": {
+								"source": {
+									"type": "SqlSource"
+								},
+								"sink": {
+									"type": "SqlDWSink",
+									"allowPolyBase": false,
+									"writeBatchSize": 10000
+								},
+								"enableStaging": false,
+								"dataIntegrationUnits": 0
+							},
+							"inputs": [
+								{
+									"referenceName": "SourceDataset_6lp",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_structure": "@item().source.structure",
+										"cw_tableName": "@item().source.tableName"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DestinationDataset_6lp",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_structure": "@item().destination.structure",
+										"cw_tableName": "@item().destination.tableName"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"cw_items": {
+				"type": "Array",
+				"defaultValue": [
+					{
+						"source": {
+							"structure": [
+								{
+									"name": "ClientId",
+									"type": "Int32"
+								},
+								{
+									"name": "FirstName",
+									"type": "String"
+								},
+								{
+									"name": "MiddleName",
+									"type": "String"
+								},
+								{
+									"name": "LastName",
+									"type": "String"
+								},
+								{
+									"name": "Gender",
+									"type": "String"
+								},
+								{
+									"name": "DateOfBirth",
+									"type": "DateTime"
+								},
+								{
+									"name": "City",
+									"type": "String"
+								},
+								{
+									"name": "ZipCode",
+									"type": "String"
+								},
+								{
+									"name": "Longitude",
+									"type": "Double"
+								},
+								{
+									"name": "Latitude",
+									"type": "Double"
+								},
+								{
+									"name": "Notes",
+									"type": "String"
+								},
+								{
+									"name": "CreditRating",
+									"type": "Double"
+								},
+								{
+									"name": "XCode",
+									"type": "String"
+								},
+								{
+									"name": "OccupationId",
+									"type": "Int32"
+								},
+								{
+									"name": "TelephoneNumber",
+									"type": "String"
+								},
+								{
+									"name": "Street1",
+									"type": "String"
+								},
+								{
+									"name": "Street2",
+									"type": "String"
+								}
+							],
+							"tableName": "[dbo].[Client]"
+						},
+						"destination": {
+							"structure": [
+								{
+									"name": "ClientId",
+									"type": "Int32"
+								},
+								{
+									"name": "FirstName",
+									"type": "String"
+								},
+								{
+									"name": "MiddleName",
+									"type": "String"
+								},
+								{
+									"name": "LastName",
+									"type": "String"
+								},
+								{
+									"name": "Gender",
+									"type": "String"
+								},
+								{
+									"name": "DateOfBirth",
+									"type": "DateTime"
+								},
+								{
+									"name": "CreditRating",
+									"type": "Double"
+								},
+								{
+									"name": "XCode",
+									"type": "String"
+								},
+								{
+									"name": "OccupationId",
+									"type": "Int32"
+								},
+								{
+									"name": "TelephoneNumber",
+									"type": "String"
+								},
+								{
+									"name": "Street1",
+									"type": "String"
+								},
+								{
+									"name": "Street2",
+									"type": "String"
+								},
+								{
+									"name": "City",
+									"type": "String"
+								},
+								{
+									"name": "ZipCode",
+									"type": "String"
+								},
+								{
+									"name": "Longitude",
+									"type": "Double"
+								},
+								{
+									"name": "Latitude",
+									"type": "Double"
+								},
+								{
+									"name": "Notes",
+									"type": "String"
+								}
+							],
+							"tableName": "[dbo].[Client]"
+						},
+						"copyActivity": {
+							"translator": {
+								"type": "TabularTranslator",
+								"columnMappings": {
+									"ClientId": "ClientId",
+									"FirstName": "FirstName",
+									"MiddleName": "MiddleName",
+									"LastName": "LastName",
+									"Gender": "Gender",
+									"DateOfBirth": "DateOfBirth",
+									"CreditRating": "CreditRating",
+									"XCode": "XCode",
+									"OccupationId": "OccupationId",
+									"TelephoneNumber": "TelephoneNumber",
+									"Street1": "Street1",
+									"Street2": "Street2",
+									"City": "City",
+									"ZipCode": "ZipCode",
+									"Longitude": "Longitude",
+									"Latitude": "Latitude",
+									"Notes": "Notes"
+								}
+							}
+						}
+					},
+					{
+						"source": {
+							"structure": [
+								{
+									"name": "OccupationId",
+									"type": "Int32"
+								},
+								{
+									"name": "OccupationName",
+									"type": "String"
+								}
+							],
+							"tableName": "[dbo].[Occupation]"
+						},
+						"destination": {
+							"structure": [
+								{
+									"name": "OccupationId",
+									"type": "Int32"
+								},
+								{
+									"name": "OccupationName",
+									"type": "String"
+								}
+							],
+							"tableName": "[dbo].[Occupation]"
+						},
+						"copyActivity": {
+							"translator": {
+								"type": "TabularTranslator",
+								"columnMappings": {
+									"OccupationId": "OccupationId",
+									"OccupationName": "OccupationName"
+								}
+							}
+						}
+					},
+					{
+						"source": {
+							"structure": [
+								{
+									"name": "OrderId",
+									"type": "Int32"
+								},
+								{
+									"name": "ClientId",
+									"type": "Int32"
+								},
+								{
+									"name": "OrderDate",
+									"type": "DateTime"
+								},
+								{
+									"name": "OrderTotal",
+									"type": "Decimal"
+								},
+								{
+									"name": "OrderStatus",
+									"type": "String"
+								}
+							],
+							"tableName": "[dbo].[Order]"
+						},
+						"destination": {
+							"structure": [
+								{
+									"name": "OrderId",
+									"type": "Int32"
+								},
+								{
+									"name": "ClientId",
+									"type": "Int32"
+								},
+								{
+									"name": "OrderDate",
+									"type": "DateTime"
+								},
+								{
+									"name": "OrderTotal",
+									"type": "Decimal"
+								},
+								{
+									"name": "OrderStatus",
+									"type": "String"
+								}
+							],
+							"tableName": "[dbo].[Order]"
+						},
+						"copyActivity": {
+							"translator": {
+								"type": "TabularTranslator",
+								"columnMappings": {
+									"OrderId": "OrderId",
+									"ClientId": "ClientId",
+									"OrderDate": "OrderDate",
+									"OrderTotal": "OrderTotal",
+									"OrderStatus": "OrderStatus"
+								}
+							}
+						}
+					},
+					{
+						"source": {
+							"structure": [
+								{
+									"name": "OrderId",
+									"type": "Int32"
+								},
+								{
+									"name": "LineNumber",
+									"type": "Int32"
+								},
+								{
+									"name": "ProductId",
+									"type": "Int32"
+								},
+								{
+									"name": "Qty",
+									"type": "Decimal"
+								},
+								{
+									"name": "LineTotal",
+									"type": "Decimal"
+								}
+							],
+							"tableName": "[dbo].[OrderLine]"
+						},
+						"destination": {
+							"structure": [
+								{
+									"name": "OrderId",
+									"type": "Int32"
+								},
+								{
+									"name": "LineNumber",
+									"type": "Int32"
+								},
+								{
+									"name": "ProductId",
+									"type": "Int32"
+								},
+								{
+									"name": "Qty",
+									"type": "Decimal"
+								},
+								{
+									"name": "LineTotal",
+									"type": "Decimal"
+								}
+							],
+							"tableName": "[dbo].[OrderLine]"
+						},
+						"copyActivity": {
+							"translator": {
+								"type": "TabularTranslator",
+								"columnMappings": {
+									"OrderId": "OrderId",
+									"LineNumber": "LineNumber",
+									"ProductId": "ProductId",
+									"Qty": "Qty",
+									"LineTotal": "LineTotal"
+								}
+							}
+						}
+					},
+					{
+						"source": {
+							"structure": [
+								{
+									"name": "ProductId",
+									"type": "Int32"
+								},
+								{
+									"name": "ProductName",
+									"type": "String"
+								},
+								{
+									"name": "Price",
+									"type": "Decimal"
+								},
+								{
+									"name": "Active",
+									"type": "Boolean"
+								},
+								{
+									"name": "Stock",
+									"type": "Decimal"
+								}
+							],
+							"tableName": "[dbo].[Product]"
+						},
+						"destination": {
+							"structure": [
+								{
+									"name": "ProductId",
+									"type": "Int32"
+								},
+								{
+									"name": "ProductName",
+									"type": "String"
+								},
+								{
+									"name": "Price",
+									"type": "Decimal"
+								},
+								{
+									"name": "Active",
+									"type": "Boolean"
+								},
+								{
+									"name": "Stock",
+									"type": "Decimal"
+								}
+							],
+							"tableName": "[dbo].[Product]"
+						},
+						"copyActivity": {
+							"translator": {
+								"type": "TabularTranslator",
+								"columnMappings": {
+									"ProductId": "ProductId",
+									"ProductName": "ProductName",
+									"Price": "Price",
+									"Active": "Active",
+									"Stock": "Stock"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

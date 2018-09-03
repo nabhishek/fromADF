@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_AzureBlob_tzx",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorageDatabricks",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"folderPath": "vincts123"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

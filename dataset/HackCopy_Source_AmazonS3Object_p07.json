@@ -1,0 +1,16 @@
+{
+	"name": "HackCopy_Source_AmazonS3Object_p07",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "perf_AmazonS3",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AmazonS3Object",
+		"typeProperties": {
+			"key": "",
+			"prefix": "amazons3.donottouch/",
+			"bucketName": "adfcopye2etest"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

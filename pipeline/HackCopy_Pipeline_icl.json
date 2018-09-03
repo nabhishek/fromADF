@@ -1,0 +1,52 @@
+{
+	"name": "HackCopy_Pipeline_icl",
+	"properties": {
+		"description": "[dbo].[Client] (onpremSqlServer) → perf/hybriddatamover/ (AzureStorage)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_icl",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[Client]"
+					},
+					{
+						"name": "Destination",
+						"value": "perf/hybriddatamover/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 16
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_SqlServerTable_icl",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_AzureBlob_icl",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

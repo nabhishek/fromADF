@@ -1,0 +1,55 @@
+{
+	"name": "HackCopy_Pipeline_mye",
+	"properties": {
+		"description": "[dbo].[Product] (onpremSqlServer) → / (AzureSqlDW1)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_mye",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[Product]"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Product]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": false,
+						"writeBatchSize": 100000,
+						"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[Product]', 'U') IS NULL CREATE TABLE [dbo].[Product] ([ProductId] int,\n[ProductName] varchar(80),\n[Price] smallmoney,\n[Active] bit,\n[Stock] decimal(18,3));\n"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_SqlServerTable_mye",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_AzureSqlDWTable_mye",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

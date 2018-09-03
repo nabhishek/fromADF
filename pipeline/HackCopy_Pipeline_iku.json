@@ -1,0 +1,55 @@
+{
+	"name": "HackCopy_Pipeline_iku",
+	"properties": {
+		"description": "[dbo].[Product] (onpremSqlServer) → Items (CosmosDb_DBTODOLIST)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_iku",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[Product]"
+					},
+					{
+						"name": "Destination",
+						"value": "Items"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "DocumentDbCollectionSink",
+						"nestingSeparator": ".",
+						"writeBatchSize": 10000,
+						"writeBehavior": "insert"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_SqlServerTable_iku",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_DocumentDbCollection_iku",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

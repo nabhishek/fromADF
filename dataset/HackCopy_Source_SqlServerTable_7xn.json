@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Source_SqlServerTable_7xn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "onpremSqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SqlServerTable",
+		"typeProperties": {
+			"tableName": "[dbo].[Client]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

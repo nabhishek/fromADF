@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_AzureBlob_7s6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorage",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"folderPath": "perf/hybriddatamover"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

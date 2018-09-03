@@ -1,0 +1,16 @@
+{
+	"name": "localfilesystem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "\\\\ab-desktop\\DB backup",
+			"userId": "fareast\\abnarain",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5OWM0ZTE1MC1iNTBhLTQ3NDgtYjY5My0xZjg1ZTMyZWU1NTMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IRForCopyDataTool",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

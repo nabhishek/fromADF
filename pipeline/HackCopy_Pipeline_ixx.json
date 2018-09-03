@@ -1,0 +1,52 @@
+{
+	"name": "HackCopy_Pipeline_ixx",
+	"properties": {
+		"description": "[dbo].[Order] (onpremSqlServer) → /_success (FileServer1)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_ixx",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[Order]"
+					},
+					{
+						"name": "Destination",
+						"value": "/_success"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "FileSystemSink"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_SqlServerTable_ixx",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_FileShare_ixx",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

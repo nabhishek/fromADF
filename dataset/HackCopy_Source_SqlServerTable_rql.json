@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Source_SqlServerTable_rql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "onpremSqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SqlServerTable",
+		"typeProperties": {
+			"tableName": "[dbo].[Product]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

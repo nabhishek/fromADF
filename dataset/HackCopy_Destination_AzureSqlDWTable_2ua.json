@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_AzureSqlDWTable_2ua",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"typeProperties": {
+			"tableName": "[dbo].[DimOrganization]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

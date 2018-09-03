@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_FileShare_5i0",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "localfilesystem",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare",
+		"typeProperties": {
+			"folderPath": "dump"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

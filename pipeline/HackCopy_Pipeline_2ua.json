@@ -1,0 +1,54 @@
+{
+	"name": "HackCopy_Pipeline_2ua",
+	"properties": {
+		"description": "[dbo].[Occupation] (onpremSqlServer) → [dbo].[DimOrganization] (AzureSqlDW1)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_2ua",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[Occupation]"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[DimOrganization]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": false,
+						"writeBatchSize": 100000
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_SqlServerTable_2ua",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_AzureSqlDWTable_2ua",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "HackCopy_Source_AmazonS3Object_0t1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "perf_AmazonS3",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AmazonS3Object",
+		"typeProperties": {
+			"key": "",
+			"prefix": "0001e073-3e00-4758-a3e0-ef360cfc038e/",
+			"bucketName": "adfsingapore"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

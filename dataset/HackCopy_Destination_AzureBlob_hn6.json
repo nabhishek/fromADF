@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_AzureBlob_hn6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"folderPath": "source"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

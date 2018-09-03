@@ -1,0 +1,53 @@
+{
+	"name": "HackCopy_Pipeline_0t1",
+	"properties": {
+		"description": "adfsingapore/0001e073-3e00-4758-a3e0-ef360cfc038e/ (perf_AmazonS3) → openhackdemo/ (AzureStorage)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_0t1",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "adfsingapore/0001e073-3e00-4758-a3e0-ef360cfc038e/"
+					},
+					{
+						"name": "Destination",
+						"value": "openhackdemo/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "FileSystemSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 16
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_AmazonS3Object_0t1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_AzureBlob_0t1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

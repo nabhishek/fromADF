@@ -1,0 +1,15 @@
+{
+	"name": "AzureDataLakeGen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeGen2",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlobFSFile",
+		"typeProperties": {
+			"fileName": "",
+			"folderPath": "onprem"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

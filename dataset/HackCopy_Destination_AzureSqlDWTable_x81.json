@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_AzureSqlDWTable_x81",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"typeProperties": {
+			"tableName": "[dbo].[Occupation]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

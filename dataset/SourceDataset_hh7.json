@@ -1,0 +1,14 @@
+{
+	"name": "SourceDataset_hh7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "localfilesystem",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare",
+		"typeProperties": {
+			"folderPath": "Code"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

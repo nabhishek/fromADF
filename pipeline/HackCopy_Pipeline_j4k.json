@@ -1,0 +1,55 @@
+{
+	"name": "HackCopy_Pipeline_j4k",
+	"properties": {
+		"description": "[dbo].[OrderLine] (onpremSqlServer) → / (AzureSqlDW1)",
+		"activities": [
+			{
+				"name": "HackCopy_Copy_j4k",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[OrderLine]"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[OrderLine]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": false,
+						"writeBatchSize": 100000,
+						"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[OrderLine]', 'U') IS NULL CREATE TABLE [dbo].[OrderLine] ([OrderId] int,\n[LineNumber] int,\n[ProductId] int,\n[Qty] decimal(18,3),\n[LineTotal] decimal(18,2));\n"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "HackCopy_Source_SqlServerTable_j4k",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HackCopy_Destination_AzureSqlDWTable_j4k",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

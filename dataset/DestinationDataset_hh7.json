@@ -1,0 +1,15 @@
+{
+	"name": "DestinationDataset_hh7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "",
+			"folderPath": "source"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

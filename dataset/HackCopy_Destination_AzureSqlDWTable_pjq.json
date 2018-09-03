@@ -1,0 +1,14 @@
+{
+	"name": "HackCopy_Destination_AzureSqlDWTable_pjq",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW3",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"typeProperties": {
+			"tableName": "[dbo].[Occupation]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
