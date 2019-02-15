@@ -13,7 +13,7 @@
 				},
 				"typeProperties": {
 					"url": "https://management.azure.com/subscriptions/7b68d2b5-dfbe-46e1-938f-98ed143b7953/resourceGroups/7b68d2b5-dfbe-46e1-938f-98ed143b7953/providers/Microsoft.DataFactory/factories/7b68d2b5-dfbe-46e1-938f-98ed143b7953/integrationRuntimes/ssis-ir/stop?api-version=2018-06-01",
-					"method": "POST",
+					"method": "GET",
 					"headers": {
 						"Content-Type": "application/json"
 					},
