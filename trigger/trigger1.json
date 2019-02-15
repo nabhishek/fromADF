@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "HackCopy_Pipeline_0t1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2019-02-15T03:32:00.000Z",
+				"endTime": "2019-02-16T04:32:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
