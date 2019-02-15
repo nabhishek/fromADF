@@ -6,207 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory Name",
 			"defaultValue": "7b68d2b5-dfbe-46e1-938f-98ed143b7953"
-		},
-		"integrationRuntime_IRForCopyDataTool": {
-			"type": "string",
-			"metadata": "Integration Runtime Name",
-			"defaultValue": "IRForCopyDataTool"
-		},
-		"integrationRuntime_ssis-ir": {
-			"type": "string",
-			"metadata": "Integration Runtime Name",
-			"defaultValue": "ssis-ir"
-		},
-		"ADLS_Gen2_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ADLS_Gen2'"
-		},
-		"AzureDataLakeGen2_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeGen2'"
-		},
-		"AzureSqlDW1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDW1'"
-		},
-		"AzureSqlDW3_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDW3'"
-		},
-		"AzureStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureStorage'"
-		},
-		"AzureStorage1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureStorage1'"
-		},
-		"AzureStorageDatabricks_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureStorageDatabricks'"
-		},
-		"CosmosDb_DBTODOLIST_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'CosmosDb_DBTODOLIST'"
-		},
-		"FileServer1_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'FileServer1'"
-		},
-		"localfilesystem_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'localfilesystem'"
-		},
-		"onpremSqlServer_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'onpremSqlServer'"
-		},
-		"perf_AmazonS3_secretAccessKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'secretAccessKey' of 'perf_AmazonS3'"
-		},
-		"AzureDataLakeGen2_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"AzureDataLakeGen2_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "onprem"
-		},
-		"DestinationDataset_hh7_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"DestinationDataset_hh7_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "source"
-		},
-		"HackCopy_Destination_AzureBlob_0t1_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "openhackdemo"
-		},
-		"HackCopy_Destination_AzureBlob_7s6_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "perf/hybriddatamover"
-		},
-		"HackCopy_Destination_AzureBlob_hn6_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "source"
-		},
-		"HackCopy_Destination_AzureBlob_icl_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "perf/hybriddatamover"
-		},
-		"HackCopy_Destination_AzureBlob_jvu_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "documents"
-		},
-		"HackCopy_Destination_AzureBlob_nhg_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "perf/hybriddatamover"
-		},
-		"HackCopy_Destination_AzureBlob_p07_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "adfjobs"
-		},
-		"HackCopy_Destination_AzureBlob_pee_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "documents"
-		},
-		"HackCopy_Destination_AzureBlob_suk_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "test"
-		},
-		"HackCopy_Destination_AzureBlob_tzx_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "vincts123"
-		},
-		"HackCopy_Destination_FileShare_5i0_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "dump"
-		},
-		"HackCopy_Destination_FileShare_8kb_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "dump"
-		},
-		"HackCopy_Destination_FileShare_i21_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "eric"
-		},
-		"HackCopy_Destination_FileShare_ixx_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": "_success"
-		},
-		"HackCopy_Destination_FileShare_ixx_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"HackCopy_Destination_FileShare_w0x_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "dump"
-		},
-		"HackCopy_Source_FileShare_5i0_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": "Product.csv"
-		},
-		"HackCopy_Source_FileShare_5i0_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"HackCopy_Source_FileShare_7s6_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "dump"
-		},
-		"HackCopy_Source_FileShare_jvu_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": "data mover tool.zip"
-		},
-		"HackCopy_Source_FileShare_jvu_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"HackCopy_Source_FileShare_suk_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": "data.zip"
-		},
-		"HackCopy_Source_FileShare_suk_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"SourceDataset_hh7_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "Code"
-		},
-		"ADLS_Gen2_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://datalakegen2abnarain.dfs.core.windows.net"
-		},
-		"AzureDataLakeGen2_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://datalakegen2abnarain.dfs.core.windows.net"
-		},
-		"FileServer1_properties_typeProperties_userId": {
-			"type": "string",
-			"defaultValue": "fareast\\abnarain"
-		},
-		"localfilesystem_properties_typeProperties_userId": {
-			"type": "string",
-			"defaultValue": "fareast\\abnarain"
-		},
-		"perf_AmazonS3_properties_typeProperties_accessKeyId": {
-			"type": "string",
-			"defaultValue": "AKIAJFJFS2R57CYTWG4A"
-		},
-		"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
-			"type": "string",
-			"defaultValue": "lab-server.database.windows.net"
-		},
-		"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
-			"type": "string",
-			"defaultValue": "abhishek"
-		},
-		"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
-			"type": "secureString"
 		}
 	},
 	"variables": {
@@ -222,8 +21,6 @@
 					{
 						"name": "ForEach_6lp",
 						"type": "ForEach",
-						"dependsOn": [],
-						"userProperties": [],
 						"typeProperties": {
 							"items": {
 								"value": "@pipeline().parameters.cw_items",
@@ -233,7 +30,6 @@
 								{
 									"name": "Copy_6lp",
 									"type": "Copy",
-									"dependsOn": [],
 									"policy": {
 										"timeout": "7.00:00:00",
 										"retry": 0,
@@ -694,8 +490,7 @@
 							}
 						]
 					}
-				},
-				"annotations": []
+				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SourceDataset_6lp')]",
@@ -711,7 +506,6 @@
 					{
 						"name": "Copy_hh7",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -743,20 +537,17 @@
 						"inputs": [
 							{
 								"referenceName": "SourceDataset_hh7",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "DestinationDataset_hh7",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SourceDataset_hh7')]",
@@ -772,8 +563,6 @@
 					{
 						"name": "ForEach_xxj",
 						"type": "ForEach",
-						"dependsOn": [],
-						"userProperties": [],
 						"typeProperties": {
 							"items": {
 								"value": "@pipeline().parameters.cw_items",
@@ -783,7 +572,6 @@
 								{
 									"name": "Copy_xxj",
 									"type": "Copy",
-									"dependsOn": [],
 									"policy": {
 										"timeout": "7.00:00:00",
 										"retry": 0,
@@ -1271,13 +1059,11 @@
 							}
 						]
 					}
-				},
-				"annotations": []
+				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SourceDataset_xxj')]",
-				"[concat(variables('factoryId'), '/datasets/DestinationDataset_xxj')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage1')]"
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_xxj')]"
 			]
 		},
 		{
@@ -1290,7 +1076,6 @@
 					{
 						"name": "HackCopy_Copy_09u",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1324,20 +1109,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_09u",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_09u",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_09u')]",
@@ -1354,7 +1136,6 @@
 					{
 						"name": "HackCopy_Copy_0t1",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1386,20 +1167,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_AmazonS3Object_0t1",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_0t1",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_AmazonS3Object_0t1')]",
@@ -1416,7 +1194,6 @@
 					{
 						"name": "HackCopy_Copy_1b1",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1450,20 +1227,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_1b1",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_DocumentDbCollection_1b1",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_1b1')]",
@@ -1480,7 +1254,6 @@
 					{
 						"name": "HackCopy_Copy_2ua",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1513,20 +1286,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_2ua",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_2ua",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_2ua')]",
@@ -1543,7 +1313,6 @@
 					{
 						"name": "HackCopy_Copy_3yq",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1576,20 +1345,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_3yq",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_3yq",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_3yq')]",
@@ -1606,7 +1372,6 @@
 					{
 						"name": "HackCopy_Copy_47x",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1640,20 +1405,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_47x",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_DocumentDbCollection_47x",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_47x')]",
@@ -1670,7 +1432,6 @@
 					{
 						"name": "HackCopy_Copy_5i0",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1702,20 +1463,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_FileShare_5i0",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_FileShare_5i0",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_FileShare_5i0')]",
@@ -1732,7 +1490,6 @@
 					{
 						"name": "HackCopy_Copy_5qj",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1766,20 +1523,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_5qj",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_5qj",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_5qj')]",
@@ -1796,7 +1550,6 @@
 					{
 						"name": "HackCopy_Copy_7s6",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1828,20 +1581,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_FileShare_7s6",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_7s6",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_FileShare_7s6')]",
@@ -1858,7 +1608,6 @@
 					{
 						"name": "HackCopy_Copy_7xn",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1891,20 +1640,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_7xn",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_7xn",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_7xn')]",
@@ -1921,7 +1667,6 @@
 					{
 						"name": "HackCopy_Copy_88d",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -1955,20 +1700,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_88d",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_DocumentDbCollection_88d",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_88d')]",
@@ -1985,7 +1727,6 @@
 					{
 						"name": "HackCopy_Copy_8kb",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2016,20 +1757,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_8kb",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_FileShare_8kb",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_8kb')]",
@@ -2046,7 +1784,6 @@
 					{
 						"name": "HackCopy_Copy_e3c",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2079,20 +1816,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_e3c",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_e3c",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_e3c')]",
@@ -2109,7 +1843,6 @@
 					{
 						"name": "HackCopy_Copy_hn6",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2141,20 +1874,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_AmazonS3Object_hn6",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_hn6",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_AmazonS3Object_hn6')]",
@@ -2171,7 +1901,6 @@
 					{
 						"name": "HackCopy_Copy_i21",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2202,20 +1931,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_i21",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_FileShare_i21",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_i21')]",
@@ -2232,7 +1958,6 @@
 					{
 						"name": "HackCopy_Copy_icl",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2263,20 +1988,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_icl",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_icl",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_icl')]",
@@ -2293,7 +2015,6 @@
 					{
 						"name": "HackCopy_Copy_iku",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2327,20 +2048,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_iku",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_DocumentDbCollection_iku",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_iku')]",
@@ -2357,7 +2075,6 @@
 					{
 						"name": "HackCopy_Copy_ixx",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2388,20 +2105,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_ixx",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_FileShare_ixx",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_ixx')]",
@@ -2418,7 +2132,6 @@
 					{
 						"name": "HackCopy_Copy_j4k",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2452,20 +2165,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_j4k",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_j4k",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_j4k')]",
@@ -2482,7 +2192,6 @@
 					{
 						"name": "HackCopy_Copy_jqe",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2515,20 +2224,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_jqe",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_jqe",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_jqe')]",
@@ -2545,7 +2251,6 @@
 					{
 						"name": "HackCopy_Copy_jvu",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2577,20 +2282,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_FileShare_jvu",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_jvu",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_FileShare_jvu')]",
@@ -2607,7 +2309,6 @@
 					{
 						"name": "HackCopy_Copy_ml5",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2641,20 +2342,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_AzureSqlDWTable_ml5",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_DocumentDbCollection_ml5",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_AzureSqlDWTable_ml5')]",
@@ -2671,7 +2369,6 @@
 					{
 						"name": "HackCopy_Copy_mye",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2705,20 +2402,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_mye",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_mye",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_mye')]",
@@ -2735,7 +2429,6 @@
 					{
 						"name": "HackCopy_Copy_nhg",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2767,20 +2460,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_AmazonS3Object_nhg",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_nhg",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_AmazonS3Object_nhg')]",
@@ -2797,7 +2487,6 @@
 					{
 						"name": "HackCopy_Copy_p07",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2829,20 +2518,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_AmazonS3Object_p07",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_p07",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_AmazonS3Object_p07')]",
@@ -2859,7 +2545,6 @@
 					{
 						"name": "HackCopy_Copy_pee",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2890,20 +2575,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_pee",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_pee",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_pee')]",
@@ -2920,7 +2602,6 @@
 					{
 						"name": "HackCopy_Copy_pjc",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -2953,20 +2634,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_pjc",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_pjc",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_pjc')]",
@@ -2983,7 +2661,6 @@
 					{
 						"name": "HackCopy_Copy_pjq",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -3016,20 +2693,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_pjq",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_pjq",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_pjq')]",
@@ -3046,7 +2720,6 @@
 					{
 						"name": "HackCopy_Copy_psg",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -3079,20 +2752,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_psg",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_psg",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_psg')]",
@@ -3109,7 +2779,6 @@
 					{
 						"name": "HackCopy_Copy_rql",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -3143,20 +2812,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_rql",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_rql",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_rql')]",
@@ -3173,7 +2839,6 @@
 					{
 						"name": "HackCopy_Copy_suk",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -3205,20 +2870,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_FileShare_suk",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_suk",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_FileShare_suk')]",
@@ -3235,7 +2897,6 @@
 					{
 						"name": "HackCopy_Copy_tzx",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -3267,20 +2928,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_AmazonS3Object_tzx",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureBlob_tzx",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_AmazonS3Object_tzx')]",
@@ -3297,7 +2955,6 @@
 					{
 						"name": "HackCopy_Copy_x81",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -3331,20 +2988,17 @@
 						"inputs": [
 							{
 								"referenceName": "HackCopy_Source_SqlServerTable_x81",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "HackCopy_Destination_AzureSqlDWTable_x81",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/HackCopy_Source_SqlServerTable_x81')]",
@@ -3360,14 +3014,12 @@
 					{
 						"name": "Stop Activity",
 						"type": "WebActivity",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
 							"retryIntervalInSeconds": 30,
 							"secureOutput": false
 						},
-						"userProperties": [],
 						"typeProperties": {
 							"url": "https://management.azure.com/subscriptions/7b68d2b5-dfbe-46e1-938f-98ed143b7953/resourceGroups/7b68d2b5-dfbe-46e1-938f-98ed143b7953/providers/Microsoft.DataFactory/factories/7b68d2b5-dfbe-46e1-938f-98ed143b7953/integrationRuntimes/ssis-ir/stop?api-version=2018-06-01",
 							"method": "GET",
@@ -3380,10 +3032,8 @@
 							}
 						}
 					}
-				],
-				"annotations": []
-			},
-			"dependsOn": []
+				]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureBlob1')]",
@@ -3394,7 +3044,6 @@
 					"referenceName": "AzureStorage",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
 					"format": {
@@ -3407,10 +3056,7 @@
 						"firstRowAsHeader": false
 					}
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureDataLakeGen2')]",
@@ -3421,16 +3067,12 @@
 					"referenceName": "AzureDataLakeGen2",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlobFSFile",
 				"typeProperties": {
-					"fileName": "[parameters('AzureDataLakeGen2_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('AzureDataLakeGen2_properties_typeProperties_folderPath')]"
+					"fileName": "",
+					"folderPath": "onprem"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeGen2')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_6lp')]",
@@ -3449,7 +3091,6 @@
 						"type": "String"
 					}
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"structure": {
 					"value": "@dataset().cw_structure",
@@ -3461,10 +3102,7 @@
 						"type": "Expression"
 					}
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_hh7')]",
@@ -3475,16 +3113,12 @@
 					"referenceName": "AzureStorage1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"fileName": "[parameters('DestinationDataset_hh7_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('DestinationDataset_hh7_properties_typeProperties_folderPath')]"
+					"fileName": "",
+					"folderPath": "source"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_xxj')]",
@@ -3503,7 +3137,6 @@
 						"type": "String"
 					}
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"structure": {
 					"value": "@dataset().cw_structure",
@@ -3515,10 +3148,7 @@
 						"type": "Expression"
 					}
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_0t1')]",
@@ -3529,15 +3159,11 @@
 					"referenceName": "AzureStorage",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_0t1_properties_typeProperties_folderPath')]"
+					"folderPath": "openhackdemo"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_7s6')]",
@@ -3548,15 +3174,11 @@
 					"referenceName": "AzureStorage",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_7s6_properties_typeProperties_folderPath')]"
+					"folderPath": "perf/hybriddatamover"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_hn6')]",
@@ -3567,15 +3189,11 @@
 					"referenceName": "AzureStorage1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_hn6_properties_typeProperties_folderPath')]"
+					"folderPath": "source"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_icl')]",
@@ -3586,7 +3204,6 @@
 					"referenceName": "AzureStorage",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
 					"format": {
@@ -3598,12 +3215,9 @@
 						"skipLineCount": 0,
 						"firstRowAsHeader": false
 					},
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_icl_properties_typeProperties_folderPath')]"
+					"folderPath": "perf/hybriddatamover"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_jvu')]",
@@ -3614,15 +3228,11 @@
 					"referenceName": "AzureStorage1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_jvu_properties_typeProperties_folderPath')]"
+					"folderPath": "documents"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_nhg')]",
@@ -3633,15 +3243,11 @@
 					"referenceName": "AzureStorage",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_nhg_properties_typeProperties_folderPath')]"
+					"folderPath": "perf/hybriddatamover"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_p07')]",
@@ -3652,15 +3258,11 @@
 					"referenceName": "AzureStorage",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_p07_properties_typeProperties_folderPath')]"
+					"folderPath": "adfjobs"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_pee')]",
@@ -3671,7 +3273,6 @@
 					"referenceName": "AzureStorage1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
 					"format": {
@@ -3683,12 +3284,9 @@
 						"skipLineCount": 0,
 						"firstRowAsHeader": false
 					},
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_pee_properties_typeProperties_folderPath')]"
+					"folderPath": "documents"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_suk')]",
@@ -3699,15 +3297,11 @@
 					"referenceName": "AzureStorage",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_suk_properties_typeProperties_folderPath')]"
+					"folderPath": "test"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorage')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureBlob_tzx')]",
@@ -3718,15 +3312,11 @@
 					"referenceName": "AzureStorageDatabricks",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_AzureBlob_tzx_properties_typeProperties_folderPath')]"
+					"folderPath": "vincts123"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorageDatabricks')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_09u')]",
@@ -3737,15 +3327,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Client]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_2ua')]",
@@ -3756,15 +3342,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[DimOrganization]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_3yq')]",
@@ -3775,15 +3357,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_5qj')]",
@@ -3794,15 +3372,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_7xn')]",
@@ -3813,15 +3387,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Client]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_e3c')]",
@@ -3832,15 +3402,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_j4k')]",
@@ -3851,15 +3417,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[OrderLine]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_jqe')]",
@@ -3870,15 +3432,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_mye')]",
@@ -3889,15 +3447,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_pjc')]",
@@ -3908,15 +3462,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[DimGeography]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_pjq')]",
@@ -3927,15 +3477,11 @@
 					"referenceName": "AzureSqlDW3",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_psg')]",
@@ -3946,15 +3492,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[DimPromotion]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_rql')]",
@@ -3965,15 +3507,11 @@
 					"referenceName": "AzureSqlDW3",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_AzureSqlDWTable_x81')]",
@@ -3984,15 +3522,11 @@
 					"referenceName": "AzureSqlDW1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_DocumentDbCollection_1b1')]",
@@ -4003,15 +3537,11 @@
 					"referenceName": "CosmosDb_DBTODOLIST",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "DocumentDbCollection",
 				"typeProperties": {
 					"collectionName": "Product"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CosmosDb_DBTODOLIST')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_DocumentDbCollection_47x')]",
@@ -4022,15 +3552,11 @@
 					"referenceName": "CosmosDb_DBTODOLIST",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "DocumentDbCollection",
 				"typeProperties": {
 					"collectionName": "Product"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CosmosDb_DBTODOLIST')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_DocumentDbCollection_88d')]",
@@ -4041,15 +3567,11 @@
 					"referenceName": "CosmosDb_DBTODOLIST",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "DocumentDbCollection",
 				"typeProperties": {
 					"collectionName": "Items"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CosmosDb_DBTODOLIST')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_DocumentDbCollection_iku')]",
@@ -4060,15 +3582,11 @@
 					"referenceName": "CosmosDb_DBTODOLIST",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "DocumentDbCollection",
 				"typeProperties": {
 					"collectionName": "Items"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CosmosDb_DBTODOLIST')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_DocumentDbCollection_ml5')]",
@@ -4079,15 +3597,11 @@
 					"referenceName": "CosmosDb_DBTODOLIST",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "DocumentDbCollection",
 				"typeProperties": {
 					"collectionName": "Items"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CosmosDb_DBTODOLIST')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_FileShare_5i0')]",
@@ -4098,15 +3612,11 @@
 					"referenceName": "localfilesystem",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Destination_FileShare_5i0_properties_typeProperties_folderPath')]"
+					"folderPath": "dump"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/localfilesystem')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_FileShare_8kb')]",
@@ -4117,7 +3627,6 @@
 					"referenceName": "localfilesystem",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
 					"format": {
@@ -4129,12 +3638,9 @@
 						"skipLineCount": 0,
 						"firstRowAsHeader": false
 					},
-					"folderPath": "[parameters('HackCopy_Destination_FileShare_8kb_properties_typeProperties_folderPath')]"
+					"folderPath": "dump"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/localfilesystem')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_FileShare_i21')]",
@@ -4145,7 +3651,6 @@
 					"referenceName": "localfilesystem",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
 					"format": {
@@ -4157,12 +3662,9 @@
 						"skipLineCount": 0,
 						"firstRowAsHeader": false
 					},
-					"folderPath": "[parameters('HackCopy_Destination_FileShare_i21_properties_typeProperties_folderPath')]"
+					"folderPath": "eric"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/localfilesystem')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_FileShare_ixx')]",
@@ -4173,7 +3675,6 @@
 					"referenceName": "FileServer1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
 					"format": {
@@ -4185,13 +3686,10 @@
 						"skipLineCount": 0,
 						"firstRowAsHeader": false
 					},
-					"fileName": "[parameters('HackCopy_Destination_FileShare_ixx_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('HackCopy_Destination_FileShare_ixx_properties_typeProperties_folderPath')]"
+					"fileName": "_success",
+					"folderPath": ""
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/FileServer1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Destination_FileShare_w0x')]",
@@ -4202,7 +3700,6 @@
 					"referenceName": "localfilesystem",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
 					"format": {
@@ -4214,12 +3711,9 @@
 						"skipLineCount": 0,
 						"firstRowAsHeader": false
 					},
-					"folderPath": "[parameters('HackCopy_Destination_FileShare_w0x_properties_typeProperties_folderPath')]"
+					"folderPath": "dump"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/localfilesystem')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_AmazonS3Object_0t1')]",
@@ -4230,17 +3724,13 @@
 					"referenceName": "perf_AmazonS3",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AmazonS3Object",
 				"typeProperties": {
 					"key": "",
 					"prefix": "0001e073-3e00-4758-a3e0-ef360cfc038e/",
 					"bucketName": "adfsingapore"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/perf_AmazonS3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_AmazonS3Object_hn6')]",
@@ -4251,17 +3741,13 @@
 					"referenceName": "perf_AmazonS3",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AmazonS3Object",
 				"typeProperties": {
 					"key": "",
 					"prefix": "tb/sub0/",
 					"bucketName": "perf-eastus"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/perf_AmazonS3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_AmazonS3Object_nhg')]",
@@ -4272,17 +3758,13 @@
 					"referenceName": "perf_AmazonS3",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AmazonS3Object",
 				"typeProperties": {
 					"key": "",
 					"prefix": "tb/sub0/",
 					"bucketName": "perf-eastus"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/perf_AmazonS3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_AmazonS3Object_p07')]",
@@ -4293,17 +3775,13 @@
 					"referenceName": "perf_AmazonS3",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AmazonS3Object",
 				"typeProperties": {
 					"key": "",
 					"prefix": "amazons3.donottouch/",
 					"bucketName": "adfcopye2etest"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/perf_AmazonS3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_AmazonS3Object_tzx')]",
@@ -4314,17 +3792,13 @@
 					"referenceName": "perf_AmazonS3",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AmazonS3Object",
 				"typeProperties": {
 					"key": "",
 					"prefix": "tb/sub0/",
 					"bucketName": "perf-eastus"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/perf_AmazonS3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_AzureSqlDWTable_ml5')]",
@@ -4335,15 +3809,11 @@
 					"referenceName": "AzureSqlDW3",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlDWTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDW3')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_FileShare_5i0')]",
@@ -4354,16 +3824,12 @@
 					"referenceName": "FileServer1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
-					"fileName": "[parameters('HackCopy_Source_FileShare_5i0_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('HackCopy_Source_FileShare_5i0_properties_typeProperties_folderPath')]"
+					"fileName": "Product.csv",
+					"folderPath": ""
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/FileServer1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_FileShare_7s6')]",
@@ -4374,15 +3840,11 @@
 					"referenceName": "localfilesystem",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
-					"folderPath": "[parameters('HackCopy_Source_FileShare_7s6_properties_typeProperties_folderPath')]"
+					"folderPath": "dump"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/localfilesystem')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_FileShare_jvu')]",
@@ -4393,16 +3855,12 @@
 					"referenceName": "localfilesystem",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
-					"fileName": "[parameters('HackCopy_Source_FileShare_jvu_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('HackCopy_Source_FileShare_jvu_properties_typeProperties_folderPath')]"
+					"fileName": "data mover tool.zip",
+					"folderPath": ""
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/localfilesystem')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_FileShare_suk')]",
@@ -4413,16 +3871,12 @@
 					"referenceName": "localfilesystem",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
-					"fileName": "[parameters('HackCopy_Source_FileShare_suk_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('HackCopy_Source_FileShare_suk_properties_typeProperties_folderPath')]"
+					"fileName": "data.zip",
+					"folderPath": ""
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/localfilesystem')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_09u')]",
@@ -4433,15 +3887,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Client]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_1b1')]",
@@ -4452,15 +3902,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_2ua')]",
@@ -4471,15 +3917,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_3yq')]",
@@ -4490,15 +3932,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_47x')]",
@@ -4509,15 +3947,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_5qj')]",
@@ -4528,15 +3962,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_7xn')]",
@@ -4547,15 +3977,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Client]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_88d')]",
@@ -4566,15 +3992,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_8kb')]",
@@ -4585,15 +4007,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_e3c')]",
@@ -4604,15 +4022,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_i21')]",
@@ -4623,15 +4037,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_icl')]",
@@ -4642,15 +4052,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Client]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_iku')]",
@@ -4661,15 +4067,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_ixx')]",
@@ -4680,15 +4082,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Order]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_j4k')]",
@@ -4699,15 +4097,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[OrderLine]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_jqe')]",
@@ -4718,15 +4112,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_mye')]",
@@ -4737,15 +4127,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_pee')]",
@@ -4756,15 +4142,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_pjc')]",
@@ -4775,15 +4157,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_pjq')]",
@@ -4794,15 +4172,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_psg')]",
@@ -4813,15 +4187,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_rql')]",
@@ -4832,15 +4202,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Product]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_x81')]",
@@ -4851,15 +4217,11 @@
 					"referenceName": "onpremSqlServer",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[Occupation]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_6lp')]",
@@ -4878,7 +4240,6 @@
 						"type": "String"
 					}
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"structure": {
 					"value": "@dataset().cw_structure",
@@ -4890,10 +4251,7 @@
 						"type": "Expression"
 					}
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_hh7')]",
@@ -4904,15 +4262,11 @@
 					"referenceName": "localfilesystem",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "FileShare",
 				"typeProperties": {
-					"folderPath": "[parameters('SourceDataset_hh7_properties_typeProperties_folderPath')]"
+					"folderPath": "Code"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/localfilesystem')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_xxj')]",
@@ -4931,7 +4285,6 @@
 						"type": "String"
 					}
 				},
-				"annotations": [],
 				"type": "SqlServerTable",
 				"structure": {
 					"value": "@dataset().cw_structure",
@@ -4943,221 +4296,20 @@
 						"type": "Expression"
 					}
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/onpremSqlServer')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ADLS_Gen2')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('ADLS_Gen2_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('ADLS_Gen2_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureDataLakeGen2')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('AzureDataLakeGen2_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('AzureDataLakeGen2_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlDW1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDW",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureSqlDW1_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlDW3')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDW",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureSqlDW3_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureStorage')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureStorage_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureStorage1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureStorage1_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureStorageDatabricks')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureStorageDatabricks_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/CosmosDb_DBTODOLIST')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "CosmosDb",
-				"typeProperties": {
-					"connectionString": "[parameters('CosmosDb_DBTODOLIST_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/FileServer1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "FileServer",
-				"typeProperties": {
-					"host": "\\\\ab-desktop\\data",
-					"userId": "[parameters('FileServer1_properties_typeProperties_userId')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('FileServer1_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "[parameters('integrationRuntime_IRForCopyDataTool')]",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/', parameters('integrationRuntime_IRForCopyDataTool'))]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/localfilesystem')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "FileServer",
-				"typeProperties": {
-					"host": "\\\\ab-desktop\\DB backup",
-					"userId": "[parameters('localfilesystem_properties_typeProperties_userId')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('localfilesystem_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "[parameters('integrationRuntime_IRForCopyDataTool')]",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/', parameters('integrationRuntime_IRForCopyDataTool'))]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/onpremSqlServer')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"connectionString": "[parameters('onpremSqlServer_connectionString')]"
-				},
-				"connectVia": {
-					"referenceName": "[parameters('integrationRuntime_IRForCopyDataTool')]",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/', parameters('integrationRuntime_IRForCopyDataTool'))]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/perf_AmazonS3')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AmazonS3",
-				"typeProperties": {
-					"accessKeyId": "[parameters('perf_AmazonS3_properties_typeProperties_accessKeyId')]",
-					"secretAccessKey": {
-						"type": "SecureString",
-						"value": "[parameters('perf_AmazonS3_secretAccessKey')]"
-					}
-				}
-			},
-			"dependsOn": []
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/trigger1')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"annotations": [],
 				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
 							"referenceName": "HackCopy_Pipeline_0t1",
 							"type": "PipelineReference"
-						},
-						"parameters": {}
+						}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -5174,46 +4326,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/HackCopy_Pipeline_0t1')]"
 			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/', parameters('integrationRuntime_IRForCopyDataTool'))]",
-			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "SelfHosted",
-				"typeProperties": {}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/', parameters('integrationRuntime_ssis-ir'))]",
-			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "Managed",
-				"typeProperties": {
-					"computeProperties": {
-						"location": "East US 2",
-						"nodeSize": "Standard_D3_v2",
-						"numberOfNodes": 1,
-						"maxParallelExecutionsPerNode": 2
-					},
-					"ssisProperties": {
-						"catalogInfo": {
-							"catalogServerEndpoint": "[parameters('ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]",
-							"catalogAdminUserName": "[parameters('ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]",
-							"catalogAdminPassword": {
-								"type": "SecureString",
-								"value": "[parameters('ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
-							},
-							"catalogPricingTier": "Basic"
-						},
-						"edition": "Standard",
-						"licenseType": "LicenseIncluded"
-					}
-				}
-			},
-			"dependsOn": []
 		}
 	]
 }

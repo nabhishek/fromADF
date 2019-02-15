@@ -1,0 +1,1446 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name",
+			"defaultValue": "7b68d2b5-dfbe-46e1-938f-98ed143b7953"
+		},
+		"SourceDataset_hh7_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "Code"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_i21')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Product]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_icl')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Client]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_iku')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Product]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_ixx')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Order]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_j4k')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[OrderLine]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_jqe')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Occupation]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_mye')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Product]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_pee')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Product]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_pjc')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Occupation]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_pjq')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Occupation]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_psg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Product]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_rql')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Product]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Source_SqlServerTable_x81')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"typeProperties": {
+					"tableName": "[concat('[', 'dbo].[Occupation]')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_6lp')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"parameters": {
+					"cw_structure": {
+						"type": "Array"
+					},
+					"cw_tableName": {
+						"type": "String"
+					}
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"structure": {
+					"value": "@dataset().cw_structure",
+					"type": "Expression"
+				},
+				"typeProperties": {
+					"tableName": {
+						"value": "@dataset().cw_tableName",
+						"type": "Expression"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_hh7')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "localfilesystem",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "FileShare",
+				"typeProperties": {
+					"folderPath": "[parameters('SourceDataset_hh7_properties_typeProperties_folderPath')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_xxj')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "onpremSqlServer",
+					"type": "LinkedServiceReference"
+				},
+				"parameters": {
+					"cw_structure": {
+						"type": "Array"
+					},
+					"cw_tableName": {
+						"type": "String"
+					}
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"structure": {
+					"value": "@dataset().cw_structure",
+					"type": "Expression"
+				},
+				"typeProperties": {
+					"tableName": {
+						"value": "@dataset().cw_tableName",
+						"type": "Expression"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/CopyPipeline_6lp')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "ForEach_6lp",
+						"type": "ForEach",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"items": {
+								"value": "@pipeline().parameters.cw_items",
+								"type": "Expression"
+							},
+							"activities": [
+								{
+									"name": "Copy_6lp",
+									"type": "Copy",
+									"dependsOn": [],
+									"policy": {
+										"timeout": "7.00:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false
+									},
+									"userProperties": [
+										{
+											"name": "Source",
+											"value": "@{item().source.tableName}"
+										},
+										{
+											"name": "Destination",
+											"value": "@{item().destination.tableName}"
+										}
+									],
+									"typeProperties": {
+										"source": {
+											"type": "SqlSource"
+										},
+										"sink": {
+											"type": "SqlDWSink",
+											"allowPolyBase": false,
+											"writeBatchSize": 10000
+										},
+										"enableStaging": false,
+										"dataIntegrationUnits": 0
+									},
+									"inputs": [
+										{
+											"referenceName": "SourceDataset_6lp",
+											"type": "DatasetReference",
+											"parameters": {
+												"cw_structure": "@item().source.structure",
+												"cw_tableName": "@item().source.tableName"
+											}
+										}
+									],
+									"outputs": [
+										{
+											"referenceName": "DestinationDataset_6lp",
+											"type": "DatasetReference",
+											"parameters": {
+												"cw_structure": "@item().destination.structure",
+												"cw_tableName": "@item().destination.tableName"
+											}
+										}
+									]
+								}
+							]
+						}
+					}
+				],
+				"parameters": {
+					"cw_items": {
+						"type": "Array",
+						"defaultValue": [
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "ClientId",
+											"type": "Int32"
+										},
+										{
+											"name": "FirstName",
+											"type": "String"
+										},
+										{
+											"name": "MiddleName",
+											"type": "String"
+										},
+										{
+											"name": "LastName",
+											"type": "String"
+										},
+										{
+											"name": "Gender",
+											"type": "String"
+										},
+										{
+											"name": "DateOfBirth",
+											"type": "DateTime"
+										},
+										{
+											"name": "City",
+											"type": "String"
+										},
+										{
+											"name": "ZipCode",
+											"type": "String"
+										},
+										{
+											"name": "Longitude",
+											"type": "Double"
+										},
+										{
+											"name": "Latitude",
+											"type": "Double"
+										},
+										{
+											"name": "Notes",
+											"type": "String"
+										},
+										{
+											"name": "CreditRating",
+											"type": "Double"
+										},
+										{
+											"name": "XCode",
+											"type": "String"
+										},
+										{
+											"name": "OccupationId",
+											"type": "Int32"
+										},
+										{
+											"name": "TelephoneNumber",
+											"type": "String"
+										},
+										{
+											"name": "Street1",
+											"type": "String"
+										},
+										{
+											"name": "Street2",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Client]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "ClientId",
+											"type": "Int32"
+										},
+										{
+											"name": "FirstName",
+											"type": "String"
+										},
+										{
+											"name": "MiddleName",
+											"type": "String"
+										},
+										{
+											"name": "LastName",
+											"type": "String"
+										},
+										{
+											"name": "Gender",
+											"type": "String"
+										},
+										{
+											"name": "DateOfBirth",
+											"type": "DateTime"
+										},
+										{
+											"name": "CreditRating",
+											"type": "Double"
+										},
+										{
+											"name": "XCode",
+											"type": "String"
+										},
+										{
+											"name": "OccupationId",
+											"type": "Int32"
+										},
+										{
+											"name": "TelephoneNumber",
+											"type": "String"
+										},
+										{
+											"name": "Street1",
+											"type": "String"
+										},
+										{
+											"name": "Street2",
+											"type": "String"
+										},
+										{
+											"name": "City",
+											"type": "String"
+										},
+										{
+											"name": "ZipCode",
+											"type": "String"
+										},
+										{
+											"name": "Longitude",
+											"type": "Double"
+										},
+										{
+											"name": "Latitude",
+											"type": "Double"
+										},
+										{
+											"name": "Notes",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Client]')]"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"ClientId": "ClientId",
+											"FirstName": "FirstName",
+											"MiddleName": "MiddleName",
+											"LastName": "LastName",
+											"Gender": "Gender",
+											"DateOfBirth": "DateOfBirth",
+											"CreditRating": "CreditRating",
+											"XCode": "XCode",
+											"OccupationId": "OccupationId",
+											"TelephoneNumber": "TelephoneNumber",
+											"Street1": "Street1",
+											"Street2": "Street2",
+											"City": "City",
+											"ZipCode": "ZipCode",
+											"Longitude": "Longitude",
+											"Latitude": "Latitude",
+											"Notes": "Notes"
+										}
+									}
+								}
+							},
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "OccupationId",
+											"type": "Int32"
+										},
+										{
+											"name": "OccupationName",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Occupation]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "OccupationId",
+											"type": "Int32"
+										},
+										{
+											"name": "OccupationName",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Occupation]')]"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"OccupationId": "OccupationId",
+											"OccupationName": "OccupationName"
+										}
+									}
+								}
+							},
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "OrderId",
+											"type": "Int32"
+										},
+										{
+											"name": "ClientId",
+											"type": "Int32"
+										},
+										{
+											"name": "OrderDate",
+											"type": "DateTime"
+										},
+										{
+											"name": "OrderTotal",
+											"type": "Decimal"
+										},
+										{
+											"name": "OrderStatus",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Order]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "OrderId",
+											"type": "Int32"
+										},
+										{
+											"name": "ClientId",
+											"type": "Int32"
+										},
+										{
+											"name": "OrderDate",
+											"type": "DateTime"
+										},
+										{
+											"name": "OrderTotal",
+											"type": "Decimal"
+										},
+										{
+											"name": "OrderStatus",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Order]')]"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"OrderId": "OrderId",
+											"ClientId": "ClientId",
+											"OrderDate": "OrderDate",
+											"OrderTotal": "OrderTotal",
+											"OrderStatus": "OrderStatus"
+										}
+									}
+								}
+							},
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "OrderId",
+											"type": "Int32"
+										},
+										{
+											"name": "LineNumber",
+											"type": "Int32"
+										},
+										{
+											"name": "ProductId",
+											"type": "Int32"
+										},
+										{
+											"name": "Qty",
+											"type": "Decimal"
+										},
+										{
+											"name": "LineTotal",
+											"type": "Decimal"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[OrderLine]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "OrderId",
+											"type": "Int32"
+										},
+										{
+											"name": "LineNumber",
+											"type": "Int32"
+										},
+										{
+											"name": "ProductId",
+											"type": "Int32"
+										},
+										{
+											"name": "Qty",
+											"type": "Decimal"
+										},
+										{
+											"name": "LineTotal",
+											"type": "Decimal"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[OrderLine]')]"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"OrderId": "OrderId",
+											"LineNumber": "LineNumber",
+											"ProductId": "ProductId",
+											"Qty": "Qty",
+											"LineTotal": "LineTotal"
+										}
+									}
+								}
+							},
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "ProductId",
+											"type": "Int32"
+										},
+										{
+											"name": "ProductName",
+											"type": "String"
+										},
+										{
+											"name": "Price",
+											"type": "Decimal"
+										},
+										{
+											"name": "Active",
+											"type": "Boolean"
+										},
+										{
+											"name": "Stock",
+											"type": "Decimal"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Product]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "ProductId",
+											"type": "Int32"
+										},
+										{
+											"name": "ProductName",
+											"type": "String"
+										},
+										{
+											"name": "Price",
+											"type": "Decimal"
+										},
+										{
+											"name": "Active",
+											"type": "Boolean"
+										},
+										{
+											"name": "Stock",
+											"type": "Decimal"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Product]')]"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"ProductId": "ProductId",
+											"ProductName": "ProductName",
+											"Price": "Price",
+											"Active": "Active",
+											"Stock": "Stock"
+										}
+									}
+								}
+							}
+						]
+					}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_6lp')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/CopyPipeline_hh7')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Copy_hh7",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "Code/"
+							},
+							{
+								"name": "Destination",
+								"value": "source/"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "FileSystemSource",
+								"recursive": true
+							},
+							"sink": {
+								"type": "BlobSink",
+								"copyBehavior": "PreserveHierarchy"
+							},
+							"enableStaging": false,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_hh7",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_hh7",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_hh7')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/CopyPipeline_xxj')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "ForEach_xxj",
+						"type": "ForEach",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"items": {
+								"value": "@pipeline().parameters.cw_items",
+								"type": "Expression"
+							},
+							"activities": [
+								{
+									"name": "Copy_xxj",
+									"type": "Copy",
+									"dependsOn": [],
+									"policy": {
+										"timeout": "7.00:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false
+									},
+									"userProperties": [
+										{
+											"name": "Source",
+											"value": "@{item().source.tableName}"
+										},
+										{
+											"name": "Destination",
+											"value": "@{item().destination.tableName}"
+										}
+									],
+									"typeProperties": {
+										"source": {
+											"type": "SqlSource"
+										},
+										"sink": {
+											"type": "SqlDWSink",
+											"allowPolyBase": false,
+											"writeBatchSize": 10000,
+											"preCopyScript": {
+												"value": "@item().copySink.preCopyScript",
+												"type": "Expression"
+											}
+										},
+										"enableStaging": false,
+										"enableSkipIncompatibleRow": true,
+										"redirectIncompatibleRowSettings": {
+											"linkedServiceName": {
+												"referenceName": "AzureStorage1",
+												"type": "LinkedServiceReference"
+											},
+											"path": "documents"
+										},
+										"dataIntegrationUnits": 0
+									},
+									"inputs": [
+										{
+											"referenceName": "SourceDataset_xxj",
+											"type": "DatasetReference",
+											"parameters": {
+												"cw_structure": "@item().source.structure",
+												"cw_tableName": "@item().source.tableName"
+											}
+										}
+									],
+									"outputs": [
+										{
+											"referenceName": "DestinationDataset_xxj",
+											"type": "DatasetReference",
+											"parameters": {
+												"cw_structure": "@item().destination.structure",
+												"cw_tableName": "@item().destination.tableName"
+											}
+										}
+									]
+								}
+							]
+						}
+					}
+				],
+				"parameters": {
+					"cw_items": {
+						"type": "Array",
+						"defaultValue": [
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "ClientId",
+											"type": "Int32"
+										},
+										{
+											"name": "FirstName",
+											"type": "String"
+										},
+										{
+											"name": "MiddleName",
+											"type": "String"
+										},
+										{
+											"name": "LastName",
+											"type": "String"
+										},
+										{
+											"name": "Gender",
+											"type": "String"
+										},
+										{
+											"name": "DateOfBirth",
+											"type": "DateTime"
+										},
+										{
+											"name": "CreditRating",
+											"type": "Double"
+										},
+										{
+											"name": "XCode",
+											"type": "String"
+										},
+										{
+											"name": "OccupationId",
+											"type": "Int32"
+										},
+										{
+											"name": "TelephoneNumber",
+											"type": "String"
+										},
+										{
+											"name": "Street1",
+											"type": "String"
+										},
+										{
+											"name": "Street2",
+											"type": "String"
+										},
+										{
+											"name": "City",
+											"type": "String"
+										},
+										{
+											"name": "ZipCode",
+											"type": "String"
+										},
+										{
+											"name": "Longitude",
+											"type": "Double"
+										},
+										{
+											"name": "Latitude",
+											"type": "Double"
+										},
+										{
+											"name": "Notes",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Client]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "ClientId",
+											"type": "Int32"
+										},
+										{
+											"name": "FirstName",
+											"type": "String"
+										},
+										{
+											"name": "MiddleName",
+											"type": "String"
+										},
+										{
+											"name": "LastName",
+											"type": "String"
+										},
+										{
+											"name": "Gender",
+											"type": "String"
+										},
+										{
+											"name": "DateOfBirth",
+											"type": "DateTime"
+										},
+										{
+											"name": "CreditRating",
+											"type": "Double"
+										},
+										{
+											"name": "XCode",
+											"type": "String"
+										},
+										{
+											"name": "OccupationId",
+											"type": "Int32"
+										},
+										{
+											"name": "TelephoneNumber",
+											"type": "String"
+										},
+										{
+											"name": "Street1",
+											"type": "String"
+										},
+										{
+											"name": "Street2",
+											"type": "String"
+										},
+										{
+											"name": "City",
+											"type": "String"
+										},
+										{
+											"name": "ZipCode",
+											"type": "String"
+										},
+										{
+											"name": "Longitude",
+											"type": "Double"
+										},
+										{
+											"name": "Latitude",
+											"type": "Double"
+										},
+										{
+											"name": "Notes",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Client]')]"
+								},
+								"copySink": {
+									"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[Client]', 'U') IS NULL CREATE TABLE [dbo].[Client] ([ClientId] int,\n[FirstName] varchar(40),\n[MiddleName] varchar(40),\n[LastName] varchar(40),\n[Gender] char(1),\n[DateOfBirth] datetime,\n[CreditRating] float,\n[XCode] char(7),\n[OccupationId] int,\n[TelephoneNumber] varchar(20),\n[Street1] varchar(100),\n[Street2] varchar(100),\n[City] varchar(100),\n[ZipCode] varchar(15),\n[Longitude] float,\n[Latitude] float,\n[Notes] varchar(8000));\n"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"ClientId": "ClientId",
+											"FirstName": "FirstName",
+											"MiddleName": "MiddleName",
+											"LastName": "LastName",
+											"Gender": "Gender",
+											"DateOfBirth": "DateOfBirth",
+											"CreditRating": "CreditRating",
+											"XCode": "XCode",
+											"OccupationId": "OccupationId",
+											"TelephoneNumber": "TelephoneNumber",
+											"Street1": "Street1",
+											"Street2": "Street2",
+											"City": "City",
+											"ZipCode": "ZipCode",
+											"Longitude": "Longitude",
+											"Latitude": "Latitude",
+											"Notes": "Notes"
+										}
+									}
+								}
+							},
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "OccupationId",
+											"type": "Int32"
+										},
+										{
+											"name": "OccupationName",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Occupation]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "OccupationId",
+											"type": "Int32"
+										},
+										{
+											"name": "OccupationName",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Occupation]')]"
+								},
+								"copySink": {
+									"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[Occupation]', 'U') IS NULL CREATE TABLE [dbo].[Occupation] ([OccupationId] int,\n[OccupationName] varchar(60));\n"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"OccupationId": "OccupationId",
+											"OccupationName": "OccupationName"
+										}
+									}
+								}
+							},
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "OrderId",
+											"type": "Int32"
+										},
+										{
+											"name": "ClientId",
+											"type": "Int32"
+										},
+										{
+											"name": "OrderDate",
+											"type": "DateTime"
+										},
+										{
+											"name": "OrderTotal",
+											"type": "Decimal"
+										},
+										{
+											"name": "OrderStatus",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Order]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "OrderId",
+											"type": "Int32"
+										},
+										{
+											"name": "ClientId",
+											"type": "Int32"
+										},
+										{
+											"name": "OrderDate",
+											"type": "DateTime"
+										},
+										{
+											"name": "OrderTotal",
+											"type": "Decimal"
+										},
+										{
+											"name": "OrderStatus",
+											"type": "String"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Order]')]"
+								},
+								"copySink": {
+									"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[Order]', 'U') IS NULL CREATE TABLE [dbo].[Order] ([OrderId] int,\n[ClientId] int,\n[OrderDate] datetime,\n[OrderTotal] decimal(18,2),\n[OrderStatus] char(1));\n"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"OrderId": "OrderId",
+											"ClientId": "ClientId",
+											"OrderDate": "OrderDate",
+											"OrderTotal": "OrderTotal",
+											"OrderStatus": "OrderStatus"
+										}
+									}
+								}
+							},
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "OrderId",
+											"type": "Int32"
+										},
+										{
+											"name": "LineNumber",
+											"type": "Int32"
+										},
+										{
+											"name": "ProductId",
+											"type": "Int32"
+										},
+										{
+											"name": "Qty",
+											"type": "Decimal"
+										},
+										{
+											"name": "LineTotal",
+											"type": "Decimal"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[OrderLine]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "OrderId",
+											"type": "Int32"
+										},
+										{
+											"name": "LineNumber",
+											"type": "Int32"
+										},
+										{
+											"name": "ProductId",
+											"type": "Int32"
+										},
+										{
+											"name": "Qty",
+											"type": "Decimal"
+										},
+										{
+											"name": "LineTotal",
+											"type": "Decimal"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[OrderLine]')]"
+								},
+								"copySink": {
+									"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[OrderLine]', 'U') IS NULL CREATE TABLE [dbo].[OrderLine] ([OrderId] int,\n[LineNumber] int,\n[ProductId] int,\n[Qty] decimal(18,3),\n[LineTotal] decimal(18,2));\n"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"OrderId": "OrderId",
+											"LineNumber": "LineNumber",
+											"ProductId": "ProductId",
+											"Qty": "Qty",
+											"LineTotal": "LineTotal"
+										}
+									}
+								}
+							},
+							{
+								"source": {
+									"structure": [
+										{
+											"name": "ProductId",
+											"type": "Int32"
+										},
+										{
+											"name": "ProductName",
+											"type": "String"
+										},
+										{
+											"name": "Price",
+											"type": "Decimal"
+										},
+										{
+											"name": "Active",
+											"type": "Boolean"
+										},
+										{
+											"name": "Stock",
+											"type": "Decimal"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Product]')]"
+								},
+								"destination": {
+									"structure": [
+										{
+											"name": "ProductId",
+											"type": "Int32"
+										},
+										{
+											"name": "ProductName",
+											"type": "String"
+										},
+										{
+											"name": "Price",
+											"type": "Decimal"
+										},
+										{
+											"name": "Active",
+											"type": "Boolean"
+										},
+										{
+											"name": "Stock",
+											"type": "Decimal"
+										}
+									],
+									"tableName": "[concat('[', 'dbo].[Product]')]"
+								},
+								"copySink": {
+									"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[Product]', 'U') IS NULL CREATE TABLE [dbo].[Product] ([ProductId] int,\n[ProductName] varchar(80),\n[Price] smallmoney,\n[Active] bit,\n[Stock] decimal(18,3));\n"
+								},
+								"copyActivity": {
+									"translator": {
+										"type": "TabularTranslator",
+										"columnMappings": {
+											"ProductId": "ProductId",
+											"ProductName": "ProductName",
+											"Price": "Price",
+											"Active": "Active",
+											"Stock": "Stock"
+										}
+									}
+								}
+							}
+						]
+					}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_xxj')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_09u')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Client] (onpremSqlServer) → / (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_09u",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Client]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[Client]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000,
+								"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[Client]', 'U') IS NULL CREATE TABLE [dbo].[Client] ([ClientId] int,\n[FirstName] varchar(40),\n[MiddleName] varchar(40),\n[LastName] varchar(40),\n[Gender] char(1),\n[DateOfBirth] datetime,\n[City] varchar(100),\n[ZipCode] varchar(15),\n[Longitude] float,\n[Latitude] float,\n[Notes] varchar(8000),\n[CreditRating] float,\n[XCode] char(7),\n[OccupationId] int,\n[TelephoneNumber] varchar(20),\n[Street1] varchar(100),\n[Street2] varchar(100));\n"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_09u",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_09u",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		}
+	]
+}

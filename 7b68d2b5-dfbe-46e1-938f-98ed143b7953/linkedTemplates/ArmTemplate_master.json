@@ -1,0 +1,513 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name",
+			"defaultValue": "7b68d2b5-dfbe-46e1-938f-98ed143b7953"
+		},
+		"integrationRuntime_IRForCopyDataTool": {
+			"type": "string",
+			"metadata": "Integration Runtime Name",
+			"defaultValue": "IRForCopyDataTool"
+		},
+		"integrationRuntime_ssis-ir": {
+			"type": "string",
+			"metadata": "Integration Runtime Name",
+			"defaultValue": "ssis-ir"
+		},
+		"ADLS_Gen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLS_Gen2'"
+		},
+		"AzureDataLakeGen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeGen2'"
+		},
+		"AzureSqlDW1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDW1'"
+		},
+		"AzureSqlDW3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDW3'"
+		},
+		"AzureStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorage'"
+		},
+		"AzureStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorage1'"
+		},
+		"AzureStorageDatabricks_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorageDatabricks'"
+		},
+		"CosmosDb_DBTODOLIST_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'CosmosDb_DBTODOLIST'"
+		},
+		"FileServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'FileServer1'"
+		},
+		"localfilesystem_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'localfilesystem'"
+		},
+		"onpremSqlServer_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'onpremSqlServer'"
+		},
+		"perf_AmazonS3_secretAccessKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'secretAccessKey' of 'perf_AmazonS3'"
+		},
+		"AzureDataLakeGen2_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": ""
+		},
+		"AzureDataLakeGen2_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "onprem"
+		},
+		"DestinationDataset_hh7_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": ""
+		},
+		"DestinationDataset_hh7_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "source"
+		},
+		"HackCopy_Destination_AzureBlob_0t1_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "openhackdemo"
+		},
+		"HackCopy_Destination_AzureBlob_7s6_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "perf/hybriddatamover"
+		},
+		"HackCopy_Destination_AzureBlob_hn6_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "source"
+		},
+		"HackCopy_Destination_AzureBlob_icl_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "perf/hybriddatamover"
+		},
+		"HackCopy_Destination_AzureBlob_jvu_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "documents"
+		},
+		"HackCopy_Destination_AzureBlob_nhg_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "perf/hybriddatamover"
+		},
+		"HackCopy_Destination_AzureBlob_p07_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "adfjobs"
+		},
+		"HackCopy_Destination_AzureBlob_pee_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "documents"
+		},
+		"HackCopy_Destination_AzureBlob_suk_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "test"
+		},
+		"HackCopy_Destination_AzureBlob_tzx_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "vincts123"
+		},
+		"HackCopy_Destination_FileShare_5i0_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "dump"
+		},
+		"HackCopy_Destination_FileShare_8kb_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "dump"
+		},
+		"HackCopy_Destination_FileShare_i21_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "eric"
+		},
+		"HackCopy_Destination_FileShare_ixx_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "_success"
+		},
+		"HackCopy_Destination_FileShare_ixx_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": ""
+		},
+		"HackCopy_Destination_FileShare_w0x_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "dump"
+		},
+		"HackCopy_Source_FileShare_5i0_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "Product.csv"
+		},
+		"HackCopy_Source_FileShare_5i0_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": ""
+		},
+		"HackCopy_Source_FileShare_7s6_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "dump"
+		},
+		"HackCopy_Source_FileShare_jvu_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "data mover tool.zip"
+		},
+		"HackCopy_Source_FileShare_jvu_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": ""
+		},
+		"HackCopy_Source_FileShare_suk_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "data.zip"
+		},
+		"HackCopy_Source_FileShare_suk_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": ""
+		},
+		"SourceDataset_hh7_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "Code"
+		},
+		"ADLS_Gen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalakegen2abnarain.dfs.core.windows.net"
+		},
+		"AzureDataLakeGen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalakegen2abnarain.dfs.core.windows.net"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "fareast\\abnarain"
+		},
+		"localfilesystem_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "fareast\\abnarain"
+		},
+		"perf_AmazonS3_properties_typeProperties_accessKeyId": {
+			"type": "string",
+			"defaultValue": "AKIAJFJFS2R57CYTWG4A"
+		},
+		"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"type": "string",
+			"defaultValue": "lab-server.database.windows.net"
+		},
+		"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"type": "string",
+			"defaultValue": "abhishek"
+		},
+		"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas Token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"integrationRuntime_IRForCopyDataTool": {
+						"value": "[parameters('integrationRuntime_IRForCopyDataTool')]"
+					},
+					"integrationRuntime_ssis-ir": {
+						"value": "[parameters('integrationRuntime_ssis-ir')]"
+					},
+					"ADLS_Gen2_accountKey": {
+						"value": "[parameters('ADLS_Gen2_accountKey')]"
+					},
+					"AzureDataLakeGen2_accountKey": {
+						"value": "[parameters('AzureDataLakeGen2_accountKey')]"
+					},
+					"AzureSqlDW1_connectionString": {
+						"value": "[parameters('AzureSqlDW1_connectionString')]"
+					},
+					"AzureSqlDW3_connectionString": {
+						"value": "[parameters('AzureSqlDW3_connectionString')]"
+					},
+					"AzureStorage_connectionString": {
+						"value": "[parameters('AzureStorage_connectionString')]"
+					},
+					"AzureStorage1_connectionString": {
+						"value": "[parameters('AzureStorage1_connectionString')]"
+					},
+					"AzureStorageDatabricks_connectionString": {
+						"value": "[parameters('AzureStorageDatabricks_connectionString')]"
+					},
+					"CosmosDb_DBTODOLIST_connectionString": {
+						"value": "[parameters('CosmosDb_DBTODOLIST_connectionString')]"
+					},
+					"perf_AmazonS3_secretAccessKey": {
+						"value": "[parameters('perf_AmazonS3_secretAccessKey')]"
+					},
+					"ADLS_Gen2_properties_typeProperties_url": {
+						"value": "[parameters('ADLS_Gen2_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeGen2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeGen2_properties_typeProperties_url')]"
+					},
+					"perf_AmazonS3_properties_typeProperties_accessKeyId": {
+						"value": "[parameters('perf_AmazonS3_properties_typeProperties_accessKeyId')]"
+					},
+					"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+						"value": "[parameters('ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
+					},
+					"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+						"value": "[parameters('ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
+					},
+					"ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+						"value": "[parameters('ssis-ir_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
+					},
+					"AzureDataLakeGen2_properties_typeProperties_fileName": {
+						"value": "[parameters('AzureDataLakeGen2_properties_typeProperties_fileName')]"
+					},
+					"AzureDataLakeGen2_properties_typeProperties_folderPath": {
+						"value": "[parameters('AzureDataLakeGen2_properties_typeProperties_folderPath')]"
+					},
+					"DestinationDataset_hh7_properties_typeProperties_fileName": {
+						"value": "[parameters('DestinationDataset_hh7_properties_typeProperties_fileName')]"
+					},
+					"DestinationDataset_hh7_properties_typeProperties_folderPath": {
+						"value": "[parameters('DestinationDataset_hh7_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_0t1_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_0t1_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_7s6_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_7s6_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_hn6_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_hn6_properties_typeProperties_folderPath')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"HackCopy_Destination_AzureBlob_icl_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_icl_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_jvu_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_jvu_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_nhg_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_nhg_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_p07_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_p07_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_pee_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_pee_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_suk_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_suk_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_AzureBlob_tzx_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_AzureBlob_tzx_properties_typeProperties_folderPath')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"FileServer1_password": {
+						"value": "[parameters('FileServer1_password')]"
+					},
+					"localfilesystem_password": {
+						"value": "[parameters('localfilesystem_password')]"
+					},
+					"onpremSqlServer_connectionString": {
+						"value": "[parameters('onpremSqlServer_connectionString')]"
+					},
+					"FileServer1_properties_typeProperties_userId": {
+						"value": "[parameters('FileServer1_properties_typeProperties_userId')]"
+					},
+					"localfilesystem_properties_typeProperties_userId": {
+						"value": "[parameters('localfilesystem_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"HackCopy_Destination_FileShare_5i0_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_FileShare_5i0_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_FileShare_8kb_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_FileShare_8kb_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_FileShare_i21_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_FileShare_i21_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_FileShare_ixx_properties_typeProperties_fileName": {
+						"value": "[parameters('HackCopy_Destination_FileShare_ixx_properties_typeProperties_fileName')]"
+					},
+					"HackCopy_Destination_FileShare_ixx_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_FileShare_ixx_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Destination_FileShare_w0x_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Destination_FileShare_w0x_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Source_FileShare_5i0_properties_typeProperties_fileName": {
+						"value": "[parameters('HackCopy_Source_FileShare_5i0_properties_typeProperties_fileName')]"
+					},
+					"HackCopy_Source_FileShare_5i0_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Source_FileShare_5i0_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Source_FileShare_7s6_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Source_FileShare_7s6_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Source_FileShare_jvu_properties_typeProperties_fileName": {
+						"value": "[parameters('HackCopy_Source_FileShare_jvu_properties_typeProperties_fileName')]"
+					},
+					"HackCopy_Source_FileShare_jvu_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Source_FileShare_jvu_properties_typeProperties_folderPath')]"
+					},
+					"HackCopy_Source_FileShare_suk_properties_typeProperties_fileName": {
+						"value": "[parameters('HackCopy_Source_FileShare_suk_properties_typeProperties_fileName')]"
+					},
+					"HackCopy_Source_FileShare_suk_properties_typeProperties_folderPath": {
+						"value": "[parameters('HackCopy_Source_FileShare_suk_properties_typeProperties_folderPath')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_2')]"
+			]
+		},
+		{
+			"name": "ArmTemplate_4",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_4.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"SourceDataset_hh7_properties_typeProperties_folderPath": {
+						"value": "[parameters('SourceDataset_hh7_properties_typeProperties_folderPath')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_3')]"
+			]
+		},
+		{
+			"name": "ArmTemplate_5",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_5.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_4')]"
+			]
+		},
+		{
+			"name": "ArmTemplate_6",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_6.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_5')]"
+			]
+		}
+	]
+}

@@ -1,0 +1,1210 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name",
+			"defaultValue": "7b68d2b5-dfbe-46e1-938f-98ed143b7953"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_1b1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → Product (CosmosDb_DBTODOLIST)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_1b1",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "Product"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "DocumentDbCollectionSink",
+								"nestingSeparator": ".",
+								"writeBatchSize": 10000,
+								"writeBehavior": "insert"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_1b1",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_DocumentDbCollection_1b1",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_2ua')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Occupation] (onpremSqlServer) → [dbo].[DimOrganization] (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_2ua",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Occupation]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[DimOrganization]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_2ua",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_2ua",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_3yq')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → / (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_3yq",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_3yq",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_3yq",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_47x')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → Product (CosmosDb_DBTODOLIST)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_47x",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "Product"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "DocumentDbCollectionSink",
+								"nestingSeparator": ".",
+								"writeBatchSize": 10000,
+								"writeBehavior": "insert"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_47x",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_DocumentDbCollection_47x",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_5i0')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "/Product.csv (FileServer1) → dump/ (localfilesystem)",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_5i0",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "/Product.csv"
+							},
+							{
+								"name": "Destination",
+								"value": "dump/"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "FileSystemSource",
+								"recursive": true
+							},
+							"sink": {
+								"type": "FileSystemSink"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_FileShare_5i0",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_FileShare_5i0",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_5qj')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Occupation] (onpremSqlServer) → / (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_5qj",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Occupation]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[Occupation]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000,
+								"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[Occupation]', 'U') IS NULL CREATE TABLE [dbo].[Occupation] ([OccupationId] int,\n[OccupationName] varchar(60));\n"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_5qj",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_5qj",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_7s6')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "dump/ (localfilesystem) → perf/hybriddatamover/ (AzureStorage)",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_7s6",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "dump/"
+							},
+							{
+								"name": "Destination",
+								"value": "perf/hybriddatamover/"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "FileSystemSource",
+								"recursive": true
+							},
+							"sink": {
+								"type": "BlobSink"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 16
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_FileShare_7s6",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureBlob_7s6",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_7xn')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Client] (onpremSqlServer) → / (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_7xn",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Client]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[Client]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_7xn",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_7xn",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_88d')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → Items (CosmosDb_DBTODOLIST)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_88d",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "Items"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "DocumentDbCollectionSink",
+								"nestingSeparator": ".",
+								"writeBatchSize": 10000,
+								"writeBehavior": "insert"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_88d",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_DocumentDbCollection_88d",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_8kb')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → dump/ (localfilesystem)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_8kb",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "dump/"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "FileSystemSink"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_8kb",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_FileShare_8kb",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_e3c')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Occupation] (onpremSqlServer) → / (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_e3c",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Occupation]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[Occupation]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_e3c",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_e3c",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_i21')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → eric/ (localfilesystem)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_i21",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "eric/"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "FileSystemSink"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_i21",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_FileShare_i21",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_icl')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Client] (onpremSqlServer) → perf/hybriddatamover/ (AzureStorage)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_icl",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Client]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "perf/hybriddatamover/"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "BlobSink"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 16
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_icl",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureBlob_icl",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_iku')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → Items (CosmosDb_DBTODOLIST)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_iku",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "Items"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "DocumentDbCollectionSink",
+								"nestingSeparator": ".",
+								"writeBatchSize": 10000,
+								"writeBehavior": "insert"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_iku",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_DocumentDbCollection_iku",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_ixx')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Order] (onpremSqlServer) → /_success (FileServer1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_ixx",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Order]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "/_success"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "FileSystemSink"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_ixx",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_FileShare_ixx",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_j4k')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[OrderLine] (onpremSqlServer) → / (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_j4k",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[OrderLine]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[OrderLine]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000,
+								"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[OrderLine]', 'U') IS NULL CREATE TABLE [dbo].[OrderLine] ([OrderId] int,\n[LineNumber] int,\n[ProductId] int,\n[Qty] decimal(18,3),\n[LineTotal] decimal(18,2));\n"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_j4k",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_j4k",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_jqe')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Occupation] (onpremSqlServer) → / (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_jqe",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Occupation]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[Occupation]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_jqe",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_jqe",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_jvu')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "/data mover tool.zip (localfilesystem) → documents/ (AzureStorage1)",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_jvu",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "/data mover tool.zip"
+							},
+							{
+								"name": "Destination",
+								"value": "documents/"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "FileSystemSource",
+								"recursive": true
+							},
+							"sink": {
+								"type": "BlobSink"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 16
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_FileShare_jvu",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureBlob_jvu",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_mye')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → / (AzureSqlDW1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_mye",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "SqlDWSink",
+								"allowPolyBase": false,
+								"writeBatchSize": 100000,
+								"preCopyScript": "BEGIN TRY\nIF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo') EXEC('Create Schema [dbo]');\nEND TRY\nBEGIN CATCH\nif ERROR_NUMBER() <> 2714 throw;\nEND CATCH\n\nIF OBJECT_ID('[dbo].[Product]', 'U') IS NULL CREATE TABLE [dbo].[Product] ([ProductId] int,\n[ProductName] varchar(80),\n[Price] smallmoney,\n[Active] bit,\n[Stock] decimal(18,3));\n"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 0
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_mye",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureSqlDWTable_mye",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HackCopy_Pipeline_pee')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "[concat('[', 'dbo].[Product] (onpremSqlServer) → documents/ (AzureStorage1)')]",
+				"activities": [
+					{
+						"name": "HackCopy_Copy_pee",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "[concat('[', 'dbo].[Product]')]"
+							},
+							{
+								"name": "Destination",
+								"value": "documents/"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "SqlSource"
+							},
+							"sink": {
+								"type": "BlobSink"
+							},
+							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"dataIntegrationUnits": 16
+						},
+						"inputs": [
+							{
+								"referenceName": "HackCopy_Source_SqlServerTable_pee",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "HackCopy_Destination_AzureBlob_pee",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		}
+	]
+}
