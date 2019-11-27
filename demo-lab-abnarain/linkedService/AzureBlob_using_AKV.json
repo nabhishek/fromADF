@@ -1,0 +1,26 @@
+{
+	"name": "AzureBlob_using_AKV",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"lsUrl": {
+				"type": "String"
+			}
+		},
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_LinkedService",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"akvUrl": "@{linkedService().lsUrl}"
+					}
+				},
+				"secretName": "mystorage"
+			}
+		},
+		"annotations": []
+	}
+}

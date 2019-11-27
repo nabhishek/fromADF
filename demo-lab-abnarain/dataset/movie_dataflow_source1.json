@@ -1,0 +1,24 @@
+{
+	"name": "movie_dataflow_source1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sinkBlob_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "movies.csv",
+				"container": "demo"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

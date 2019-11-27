@@ -1,0 +1,17 @@
+{
+	"name": "AzureKeyVault_LinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://keyvault-abnarain.vault.azure.net/"
+		},
+		"parameters": {
+			"akvUrl": {
+				"type": "String",
+				"defaultValue": "https://keyvault-abnarain.vault.azure.net/"
+			}
+		},
+		"annotations": []
+	}
+}

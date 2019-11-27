@@ -1,0 +1,27 @@
+{
+	"name": "AzureBlobSink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlob_using_AKV",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"lsUrl": {
+					"value": "@dataset().datasetUrl",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"datasetUrl": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "",
+			"folderPath": "dump2"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

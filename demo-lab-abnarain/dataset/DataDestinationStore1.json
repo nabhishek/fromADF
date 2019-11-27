@@ -1,0 +1,25 @@
+{
+	"name": "DataDestinationStore1",
+	"properties": {
+		"description": "Connection to your Azure Data Lake Store.",
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageGen2_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlobFSFile",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"folderPath": "adflab"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

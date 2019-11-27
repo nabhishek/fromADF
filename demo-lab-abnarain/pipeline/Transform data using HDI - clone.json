@@ -1,0 +1,46 @@
+{
+	"name": "Transform data using HDI - clone",
+	"properties": {
+		"description": "Use the template to create a simple word count PySpark application which counts the number of words in a document and outputs the value in a text file. \n",
+		"activities": [
+			{
+				"name": "ProcessData",
+				"description": "PySpark application for counting words in a document.",
+				"type": "HDInsightSpark",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"rootPath": "abnarain-hdieastus-2019-07-10t07-46-44-279z/sparkscript",
+					"entryFilePath": "sparktransform.py",
+					"arguments": [
+						"@pipeline().RunId"
+					],
+					"getDebugInfo": "Always",
+					"sparkConfig": {
+						"runid": {
+							"value": "@pipeline().RunId",
+							"type": "Expression"
+						}
+					},
+					"sparkJobLinkedService": {
+						"referenceName": "ondemandADLSGen2_ls",
+						"type": "LinkedServiceReference"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ondemand_HDI_with_ADLSGen2_ls",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

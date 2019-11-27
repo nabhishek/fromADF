@@ -1,0 +1,13 @@
+{
+	"name": "hdiOnDemand_storage_ls",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=adflabstaging1;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRFTU8tTEFCLUFCTkFSQUlOX2I3MGY3NTM2LThhZGEtNDNjOS05NGNlLTQ2MTMzZTMxNTRjNyINCn0="
+		},
+		"description": "Use the same storage account for storing the resource files (scripts, input file) and for creating the HDI on-demand cluster."
+	}
+}

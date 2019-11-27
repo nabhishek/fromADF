@@ -1,0 +1,26 @@
+{
+	"name": "AzureDatabricks2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://eastus.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_LinkedService",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricksAccessToken"
+			},
+			"newClusterNodeType": "Standard_DS3_v2",
+			"newClusterNumOfWorker": "1",
+			"newClusterVersion": "5.0.x-scala2.11",
+			"newClusterInitScripts": [
+				"dbfs:/abc",
+				"dbfs:/bcd"
+			]
+		},
+		"annotations": []
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "sourceFiles_Dataset",
+	"properties": {
+		"description": "Dataset pointing to the actual data files in source.",
+		"linkedServiceName": {
+			"referenceName": "sourceBlob_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "Product.csv",
+			"folderPath": "data/source"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

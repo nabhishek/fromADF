@@ -1,0 +1,62 @@
+{
+	"name": "databricks api calls",
+	"properties": {
+		"activities": [
+			{
+				"name": "getClusters",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://eastus.azuredatabricks.net/api/2.0/clusters/list ",
+					"method": "GET",
+					"headers": {
+						"Content-Type": "application/json",
+						"X-Databricks-Org-Id": "6964761357957243"
+					},
+					"authentication": {
+						"type": "MSI",
+						"resource": "2ff814a6-3304-4ab8-85cb-cd0e6f879c1d"
+					}
+				}
+			},
+			{
+				"name": "getToken",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://eastus.azuredatabricks.net/api/2.0/clusters/list ",
+					"method": "GET",
+					"headers": {
+						"Content-Type": "application/json",
+						"X-Databricks-Org-Id": "6964761357957243"
+					},
+					"authentication": {
+						"type": "MSI",
+						"resource": "2ff814a6-3304-4ab8-85cb-cd0e6f879c1d"
+					}
+				}
+			}
+		],
+		"folder": {
+			"name": "Extra"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

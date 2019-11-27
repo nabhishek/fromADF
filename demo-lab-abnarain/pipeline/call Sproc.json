@@ -1,0 +1,33 @@
+{
+	"name": "call Sproc",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup - SProc",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource",
+						"sqlReaderStoredProcedureName": "[SalesLT].[customerRowCount2]"
+					},
+					"dataset": {
+						"referenceName": "AzureSql_Dataset",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

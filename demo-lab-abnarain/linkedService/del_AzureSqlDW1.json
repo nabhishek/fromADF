@@ -1,0 +1,29 @@
+{
+	"name": "del_AzureSqlDW1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"server": {
+				"type": "String",
+				"defaultValue": "ab-server.abc.com"
+			},
+			"db_name": {
+				"type": "String",
+				"defaultValue": "user_db"
+			},
+			"user": {
+				"type": "String",
+				"defaultValue": "ab"
+			},
+			"secret": {
+				"type": "String",
+				"defaultValue": "value"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=@{linkedService().server};Initial Catalog=@{linkedService().db_name};User ID=@{linkedService().user};Password=@{linkedService().secret}"
+		}
+	}
+}

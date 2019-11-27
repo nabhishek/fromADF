@@ -1,0 +1,46 @@
+{
+	"name": "Transform data using on-demand HDInsight",
+	"properties": {
+		"description": "Use the template to create a simple word count PySpark application which counts the number of words in a document and outputs the value in a text file. \n",
+		"activities": [
+			{
+				"name": "ProcessData",
+				"description": "PySpark application for counting words in a document.",
+				"type": "HDInsightSpark",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"rootPath": "adftutorial/spark/script",
+					"entryFilePath": "WordCount_Spark.py",
+					"arguments": [
+						"@pipeline().RunId"
+					],
+					"getDebugInfo": "Always",
+					"sparkConfig": {
+						"runid": {
+							"value": "@pipeline().RunId",
+							"type": "Expression"
+						}
+					},
+					"sparkJobLinkedService": {
+						"referenceName": "hdiOnDemand_storage_ls",
+						"type": "LinkedServiceReference"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "hdiOnDemand_ls",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

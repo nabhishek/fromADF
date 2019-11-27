@@ -1,0 +1,41 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Notebook1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/adftutorial/Transformations (1)"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks_LS",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"lsParamWorkerNodes": {
+							"value": "@pipeline().parameters.workers",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		],
+		"parameters": {
+			"workers": {
+				"type": "string",
+				"defaultValue": "4"
+			}
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

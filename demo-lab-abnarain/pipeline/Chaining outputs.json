@@ -1,0 +1,133 @@
+{
+	"name": "Chaining outputs",
+	"properties": {
+		"activities": [
+			{
+				"name": "Iterate all users",
+				"type": "Until",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@variables('val')",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Get ID",
+							"type": "WebActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": {
+									"value": "@concat('https://reqres.in/api/users/',variables('count'))",
+									"type": "Expression"
+								},
+								"method": "GET"
+							}
+						},
+						{
+							"name": "Get Item using ID",
+							"type": "WebActivity",
+							"dependsOn": [
+								{
+									"activity": "Get ID",
+									"dependencyConditions": [
+										"Succeeded",
+										"Failed"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": {
+									"value": "@concat('https://reqres.in/api/users/',string(add(activity('Get ID').output.data.id,1)))",
+									"type": "Expression"
+								},
+								"method": "GET"
+							}
+						},
+						{
+							"name": "increment",
+							"type": "SetVariable",
+							"dependsOn": [
+								{
+									"activity": "Get ID",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								},
+								{
+									"activity": "Get Item using ID",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "count",
+								"value": {
+									"value": "@string(add(activity('Get ID').output.data.id,2))",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "stop",
+							"type": "SetVariable",
+							"dependsOn": [
+								{
+									"activity": "Get ID",
+									"dependencyConditions": [
+										"Failed"
+									]
+								},
+								{
+									"activity": "Get Item using ID",
+									"dependencyConditions": [
+										"Failed"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "val",
+								"value": true
+							}
+						}
+					],
+					"timeout": "7.00:00:00"
+				}
+			}
+		],
+		"variables": {
+			"val": {
+				"type": "Boolean"
+			},
+			"count": {
+				"type": "String",
+				"defaultValue": "1"
+			}
+		},
+		"folder": {
+			"name": "Extra"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

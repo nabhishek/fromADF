@@ -1,0 +1,31 @@
+{
+	"name": "AzureDatabricks_LS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Linked service to connect  the Azure Databricks workspace. Please modify the properties as required.  ",
+		"parameters": {
+			"lsParamWorkerNodes": {
+				"type": "string",
+				"defaultValue": "3"
+			}
+		},
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://eastus.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_LinkedService",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricksAccessToken",
+				"secretVersion": ""
+			},
+			"newClusterNodeType": "Standard_DS3_v2",
+			"newClusterNumOfWorker": "@linkedService().lsParamWorkerNodes",
+			"newClusterVersion": "5.0.x-scala2.11",
+			"instance_pool_id": "0521-075103-mend256-pool-YQWegW3D"
+		},
+		"annotations": []
+	}
+}

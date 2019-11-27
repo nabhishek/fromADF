@@ -1,0 +1,65 @@
+{
+	"name": "copy-akv-with-param",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlobSource",
+						"type": "DatasetReference",
+						"parameters": {
+							"datasetUrl": {
+								"value": "@pipeline().parameters.akv",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlobSink",
+						"type": "DatasetReference",
+						"parameters": {
+							"datasetUrl": {
+								"value": "@pipeline().parameters.akv",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			}
+		],
+		"parameters": {
+			"akv": {
+				"type": "String",
+				"defaultValue": "https://keyvault-abnarain.vault.azure.net/"
+			}
+		},
+		"folder": {
+			"name": "Extra"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

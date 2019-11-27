@@ -1,0 +1,16 @@
+{
+	"name": "DataSourceStore1",
+	"properties": {
+		"description": "Connection your Amazon S3 store.",
+		"linkedServiceName": {
+			"referenceName": "AmazonS31",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AmazonS3Object",
+		"typeProperties": {
+			"bucketName": "adflab"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
